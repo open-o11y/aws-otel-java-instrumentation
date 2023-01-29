@@ -34,7 +34,7 @@ val otelSnapshotVersion = "1.20.0"
 
 val DEPENDENCY_BOMS = listOf(
   "com.amazonaws:aws-java-sdk-bom:1.12.341",
-  "com.fasterxml.jackson:jackson-bom:2.14.0",
+  "com.fasterxml.jackson:jackson-bom:2.14.2",
   "com.google.guava:guava-bom:31.1-jre",
   "com.google.protobuf:protobuf-bom:3.21.9",
   "com.linecorp.armeria:armeria-bom:1.20.3",
