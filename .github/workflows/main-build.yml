@@ -64,7 +64,7 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
@@ -130,7 +130,7 @@ jobs:
           echo "STAGING_TAG=$java_agent_tag" >> $GITHUB_OUTPUT
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2.1.0
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.JAVA_INSTRUMENTATION_SNAPSHOT_ECR }}
           aws-region: us-west-2
@@ -233,7 +233,7 @@ jobs:
           terraform_version: "~1.4"
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.JAVA_INSTRUMENTATION_INTEG_TEST_ARN}}
           aws-region: us-west-2
@@ -303,7 +303,7 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
@@ -335,7 +335,7 @@ jobs:
           java-version: 17
           distribution: 'temurin'
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
@@ -366,7 +366,7 @@ jobs:
           java-version: 17
           distribution: 'temurin'
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
@@ -397,7 +397,7 @@ jobs:
           java-version: 17
           distribution: 'temurin'
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
